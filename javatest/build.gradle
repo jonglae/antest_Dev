@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.mongodb:mongo-java-driver:3.6.1'
+    implementation 'org.jsoup:jsoup:1.11.2'
+
+
+}
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
